@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NATHZZZ - Home</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="web.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="dropdown.css">
+</head>
+<body>
+    <header>
+        <div class="nav container">
+            <!-- Menu Icon (Clickable) -->
+            <i class='bx bx-menu' id="menu-icon"></i>
+            <!-- Logo -->
+            <a href="index.html" class="logo">
+                <img src="images/Logo.png" alt="Nathzz Logo">
+            </a>
+            
+            <!-- Navigation Items -->
+            <ul class="navbar" id="navbar">
+                <!-- Search Box (Icon inside the input field) -->
+                <div class="search-box">
+                    <i class='bx bx-search-alt-2'></i>
+                    <input type="search" placeholder="Search here...">
+                </div>
+
+                <li><a href="index.html" class="active">Home</a></li>
+                <!-- Dropdown for New Cars -->
+                <li class="dropdown">
+                    <a href="product.html">New Cars ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Sedans</a></li>
+                        <li><a href="#">SUVs</a></li>
+                        <li><a href="#">Trucks</a></li>
+                        <li><a href="#">Electric Cars</a></li>
+                    </ul>
+                </li>
+                <!-- Dropdown for Used Cars -->
+                <li class="dropdown">
+                    <a href="product.html">Used Cars ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Certified Pre-Owned</a></li>
+                        <li><a href="#">Budget Cars</a></li>
+                        <li><a href="#">Luxury Cars</a></li>
+                        <li><a href="#">Electric Used Cars</a></li>
+                    </ul>
+                </li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <!-- Right Side Items -->
+            <div class="right-nav">
+                <!-- Cart and Favorites Icons -->
+                <div class="header-icons">
+                    <div class="favorites-icon">
+                        <i class='bx bx-heart' id="favorites-btn"></i>
+                        <span class="favorites-count">0</span>
+                    </div>
+                    <div class="cart-icon">
+                        <i class='bx bx-cart' id="cart-btn"></i>
+                        <span class="cart-count">0</span>
+                    </div>
+                    <!-- Logout Button -->
+                    <a href="web.html" id="logout" class="logout">Log Out</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Favorites Dropdown -->
+        <div class="favorites-dropdown" id="favorites-dropdown">
+            <h2>Your Favorites</h2>
+            <div class="favorites-content" id="favorites-content">
+                <p>Your favorites list is empty</p>
+            </div>
+        </div>
+
+        <!-- Cart Dropdown -->
+        <div class="cart-dropdown" id="cart-dropdown">
+            <h2>Your Cart</h2>
+            <div class="cart-content" id="cart-content">
+                <p>Your cart is empty</p>
+            </div>
+            <div class="cart-total" id="cart-total" style="display: none;">
+                <div class="d-flex justify-content-between align-items-center border-top pt-3">
+                    <span class="fw-bold">Total:</span>
+                    <span class="fw-bold total-amount">$0</span>
+                </div>
+                <a href="checkout.html" class="btn btn-danger w-100 mt-3" id="checkout-btn">
+                    <i class='bx bx-cart-alt me-2'></i>
+                    Proceed to Checkout
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>Mercedes-AMG, GTS</h1>
+        <p>
+            Following Mercedes-Benz's racing heritage, the Mercedes-AMG GT is the second sports car 
+            developed entirely in-house by Mercedes-AMG. This 2-door coupe features a lightweight aluminum 
+            space frame, wrapped in a sculpted body with a long muscular hood, a set-back passenger cabin, 
+            large wheels, and a broad tail.
+        </p>
+    </div>
+
+    <div class="read-more-container">
+        <a href="#" class="read-more">Read More</a>
+    </div>
+
+    <!-- Featured Products Section -->
+    <section class="featured-products">
+        <h2>Featured Luxury Vehicles</h2>
+        <div class="products-grid">
+            <!-- Lexus -->
+            <div class="product-card" data-id="lexus-lc500">
+                <img src="https://www.lexus.com.ph/content/dam/lexus-v3-blueprint/models/coupe/lc/lc-500/my19/features/comfort-and-design/lexus-1-feature-lc500-provocative-design.jpg" alt="Lexus LC 500" class="product-img">
+                <div class="product-info">
+                    <h3 class="card-title">Lexus LC 500</h3>
+                    <p>5.0L V8 Engine, 471 HP</p>
+                    <span class="text-primary">$93,050</span>
+                    <div class="product-actions">
+                        <button class="add-to-cart-btn" data-id="lexus-lc500">Add to Cart</button>
+                        <i class='bx bx-heart favorite-btn' data-id="lexus-lc500"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BMW -->
+            <div class="product-card" data-id="bmw-m8">
+                <img src="https://www.topgear.com/sites/default/files/cars-car/carousel/2019/10/bmw_m8_coupe_fire_red_033.jpg?w=1784&h=1004" alt="BMW M8 Competition" class="product-img">
+                <div class="product-info">
+                    <h3 class="card-title">BMW M8 Competition</h3>
+                    <p>4.4L Twin-Turbo V8, 617 HP</p>
+                    <span class="text-primary">$130,000</span>
+                    <div class="product-actions">
+                        <button class="add-to-cart-btn" data-id="bmw-m8">Add to Cart</button>
+                        <i class='bx bx-heart favorite-btn' data-id="bmw-m8"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Volvo -->
+            <div class="product-card" data-id="volvo-xc90">
+                <img src="https://d1hv7ee95zft1i.cloudfront.net/custom/car-model-photo/original/volvo-xc90-2018-front-5ab3377e257f7.webp" alt="Volvo XC90 Recharge" class="product-img">
+                <div class="product-info">
+                    <h3 class="card-title">Volvo XC90 Recharge</h3>
+                    <p>Plug-in Hybrid, 455 HP</p>
+                    <span class="text-primary">$84,100</span>
+                    <div class="product-actions">
+                        <button class="add-to-cart-btn" data-id="volvo-xc90">Add to Cart</button>
+                        <i class='bx bx-heart favorite-btn' data-id="volvo-xc90"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ferrari -->
+            <div class="product-card" data-id="ferrari-sf90">
+                <img src="https://hips.hearstapps.com/hmg-prod/images/2024-ferrari-sf90-xx-stradale-111-654a677a25e4c.jpg?crop=1.00xw:0.752xh;0,0.0721xh&resize=1200:*" alt="Ferrari SF90 Stradale" class="product-img">
+                <div class="product-info">
+                    <h3 class="card-title">Ferrari SF90 Stradale</h3>
+                    <p>Hybrid V8, 986 HP</p>
+                    <span class="text-primary">$507,300</span>
+                    <div class="product-actions">
+                        <button class="add-to-cart-btn" data-id="ferrari-sf90">Add to Cart</button>
+                        <i class='bx bx-heart favorite-btn' data-id="ferrari-sf90"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lamborghini -->
+            <div class="product-card" data-id="lambo-huracan">
+                <img src="https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/facelift_2019/model_detail/huracan/sto/connected_car/hura_connect_over_04.jpg" alt="Lamborghini Huracán STO" class="product-img">
+                <div class="product-info">
+                    <h3 class="card-title">Lamborghini Huracán STO</h3>
+                    <p>5.2L V10, 640 HP</p>
+                    <span class="text-primary">$327,838</span>
+                    <div class="product-actions">
+                        <button class="add-to-cart-btn" data-id="lambo-huracan">Add to Cart</button>
+                        <i class='bx bx-heart favorite-btn' data-id="lambo-huracan"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slider Section -->
+    <section class="slider-section">
+        <div class="slider-container">
+            <div class="slider">
+                <div class="slide">
+                    <img src="https://www.thedrive.com/wp-content/uploads/2024/08/2024-Toyota-Supra-stick-shift.jpg" alt="Luxury Car 1">
+                    <div class="slide-content">
+                        <h2>Experience Luxury</h2>
+                        <p>Discover our premium collection of luxury vehicles</p>
+                        <a href="product.html" class="slide-btn">View Collection</a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="https://www.topgear.com/sites/default/files/2024/12/54196859052_9249719e93_o.jpg?w=1784&h=1004" alt="Luxury Car 2">
+                    <div class="slide-content">
+                        <h2>Performance Meets Style</h2>
+                        <p>Unleash the power of engineering excellence</p>
+                        <a href="product.html" class="slide-btn">Learn More</a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="https://www.tuvsud.com/-/media/global/images/industries/mobility-and-automotive/automotive/ss-282977432-pti.jpg?h=365&w=1280&mw=1280&la=en-PH&hash=D23DA6451E4A657E202A79485B9076F9" alt="Luxury Car 3">
+                    <div class="slide-content">
+                        <h2>Premium Service</h2>
+                        <p>Exceptional service for exceptional vehicles</p>
+                        <a href="services.html" class="slide-btn">Our Services</a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="https://automotiveinstincts.com/wp-content/uploads/2016/05/Auto-Instincts-Northridge-Shop-1.jpg" alt="Luxury Car 4">
+                    <div class="slide-content">
+                        <h2>Custom Solutions</h2>
+                        <p>Tailored to your unique preferences</p>
+                        <a href="contact.html" class="slide-btn">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Slider Navigation -->
+            <button class="slider-btn prev" id="prev">
+                <i class='bx bx-chevron-left'></i>
+            </button>
+            <button class="slider-btn next" id="next">
+                <i class='bx bx-chevron-right'></i>
+            </button>
+            
+            <!-- Slider Dots -->
+            <div class="slider-dots">
+                <span class="dot active" data-slide="0"></span>
+                <span class="dot" data-slide="1"></span>
+                <span class="dot" data-slide="2"></span>
+                <span class="dot" data-slide="3"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Your trusted destination for luxury and performance vehicles.</p>
+                <div class="social-links">
+                    <a href="#"><i class='bx bxl-facebook'></i></a>
+                    <a href="#"><i class='bx bxl-instagram'></i></a>
+                    <a href="#"><i class='bx bxl-twitter'></i></a>
+                    <a href="#"><i class='bx bxl-linkedin'></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="contact.html">Contact</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p><i class='bx bx-map'></i> 123 Luxury Drive</p>
+                <p><i class='bx bx-phone'></i> (555) 123-4567</p>
+                <p><i class='bx bx-envelope'></i> info@nathzzz.com</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Business Hours</h3>
+                <p>Monday - Friday: 9:00 AM - 8:00 PM</p>
+                <p>Saturday: 10:00 AM - 6:00 PM</p>
+                <p>Sunday: Closed</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 NATHZZZ. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="web.js"></script>
+    <script src="product.js"></script>
+    <!-- Custom JS -->
+    <script src="home.js"></script>
+</body>
+</html>

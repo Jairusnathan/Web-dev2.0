@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About NATHZZZ</title>
+    <link rel="stylesheet" href="web.css">
+    <link rel="stylesheet" href="about.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header>
+        <div class="nav container">
+            <!-- Menu Icon (Clickable) -->
+            <i class='bx bx-menu' id="menu-icon"></i>
+            <!-- Logo -->
+            <a href="index.html" class="logo">
+                <img src="images/Logo.png" alt="Nathzz Logo">
+            </a>
+            <ul class="navbar" id="navbar">
+                <!-- Search Box (Icon inside the input field) -->
+                <div class="search-box">
+                    <i class='bx bx-search-alt-2'></i>
+                    <input type="search" placeholder="Search here...">
+                </div>
+
+                <li><a href="index.html">Home</a></li>
+
+                <!-- Dropdown for New Cars -->
+                <li class="dropdown">
+                    <a href="product.html">New Cars ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="product.html">Sedans</a></li>
+                        <li><a href="product.html">SUVs</a></li>
+                        <li><a href="product.html">Trucks</a></li>
+                        <li><a href="product.html">Electric Cars</a></li>
+                    </ul>
+                </li>
+
+                <!-- Dropdown for Used Cars -->
+                <li class="dropdown">
+                    <a href="product.html">Used Cars ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="product.html">Certified Pre-Owned</a></li>
+                        <li><a href="product.html">Budget Cars</a></li>
+                        <li><a href="product.html">Luxury Cars</a></li>
+                        <li><a href="product.html">Electric Used Cars</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>        
+                
+                <!-- Cart and Favorites Icons -->
+                <div class="header-icons">
+                    <div class="favorites-icon">
+                        <i class='bx bx-heart' id="favorites-btn"></i>
+                        <span class="favorites-count">0</span>
+                    </div>
+                    <div class="cart-icon">
+                        <i class='bx bx-cart' id="cart-btn"></i>
+                        <span class="cart-count">0</span>
+                    </div>
+                    <!-- Logout Button -->
+                    <a href="login.html" id="logout" class="logout">Log Out</a>
+                </div>
+            </ul>
+        </div>
+
+        <!-- Favorites Dropdown -->
+        <div class="favorites-dropdown" id="favorites-dropdown">
+            <h2>Your Favorites</h2>
+            <div class="favorites-content" id="favorites-content">
+                <p>Your favorites list is empty</p>
+            </div>
+        </div>
+
+        <!-- Cart Dropdown -->
+        <div class="cart-dropdown" id="cart-dropdown">
+            <h2>Your Cart</h2>
+            <div class="cart-content" id="cart-content">
+                <p>Your cart is empty</p>
+            </div>
+            <div class="cart-total" id="cart-total">
+                <span>Total: $0</span>
+                <button id="checkout-btn">Checkout</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="about-section">
+        <h2>About NATHZZZ</h2>
+        <p class="intro">
+            Welcome to NATHZZZ, your premier destination for luxury and performance vehicles. 
+            With over a decade of experience in the automotive industry, we pride ourselves on 
+            delivering exceptional service and the finest selection of vehicles to our valued customers.
+        </p>
+
+        <div class="about-grid">
+            <div class="about-card">
+                <i class='bx bx-medal about-icon'></i>
+                <h3>Our Legacy</h3>
+                <p>
+                    Founded with a passion for automotive excellence, NATHZZZ has grown to become 
+                    a trusted name in luxury car sales. Our commitment to quality and customer 
+                    satisfaction has earned us numerous industry accolades.
+                </p>
+            </div>
+
+            <div class="about-card">
+                <i class='bx bx-car about-icon'></i>
+                <h3>Premium Selection</h3>
+                <p>
+                    We offer an extensive collection of premium vehicles, from elegant sedans to 
+                    powerful sports cars. Each vehicle in our inventory is carefully selected and 
+                    thoroughly inspected to meet our high standards.
+                </p>
+            </div>
+
+            <div class="about-card">
+                <i class='bx bx-user-check about-icon'></i>
+                <h3>Expert Team</h3>
+                <p>
+                    Our team of automotive experts brings years of industry experience and knowledge. 
+                    We're dedicated to helping you find the perfect vehicle that matches your lifestyle 
+                    and preferences.
+                </p>
+            </div>
+
+            <div class="about-card">
+                <i class='bx bx-support about-icon'></i>
+                <h3>Customer Service</h3>
+                <p>
+                    At NATHZZZ, we believe in building lasting relationships with our clients. 
+                    Our commitment to exceptional service extends beyond the sale, providing 
+                    ongoing support and maintenance services.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="about.js"></script>
+    <script src="cart.js"></script>
+</body>
+</html> 

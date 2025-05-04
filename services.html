@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - NATHZZZ</title>
+    <link rel="stylesheet" href="web.css">
+    <link rel="stylesheet" href="services.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header>
+        <div class="nav container">
+            <!-- Menu Icon (Clickable) -->
+            <i class='bx bx-menu' id="menu-icon"></i>
+            <!-- Logo -->
+            <a href="index.html" class="logo">
+                <img src="images/Logo.png" alt="Nathzz Logo">
+            </a>
+            <ul class="navbar" id="navbar">
+                <!-- Search Box -->
+                <div class="search-box">
+                    <i class='bx bx-search-alt-2'></i>
+                    <input type="search" placeholder="Search here...">
+                </div>
+
+                <li><a href="index.html">Home</a></li>
+
+                <!-- Dropdown for New Cars -->
+                <li class="dropdown">
+                    <a href="product.html">New Cars ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="product.html#sedans">Sedans</a></li>
+                        <li><a href="product.html#suvs">SUVs</a></li>
+                        <li><a href="product.html#trucks">Trucks</a></li>
+                        <li><a href="product.html#electric">Electric Cars</a></li>
+                    </ul>
+                </li>
+
+                <!-- Dropdown for Used Cars -->
+                <li class="dropdown">
+                    <a href="product.html">Used Cars ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="product.html#certified">Certified Pre-Owned</a></li>
+                        <li><a href="product.html#budget">Budget Cars</a></li>
+                        <li><a href="product.html#luxury">Luxury Cars</a></li>
+                        <li><a href="product.html#electric-used">Electric Used Cars</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html" class="active">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+
+                <!-- Cart and Favorites Icons -->
+                <div class="header-icons">
+                    <div class="favorites-icon">
+                        <i class='bx bx-heart' id="favorites-btn"></i>
+                        <span class="favorites-count">0</span>
+                    </div>
+                    <div class="cart-icon">
+                        <i class='bx bx-cart' id="cart-btn"></i>
+                        <span class="cart-count">0</span>
+                    </div>
+                    <a href="#" class="logout">Log Out</a>
+                </div>
+            </ul>
+        </div>
+
+        <!-- Favorites Dropdown -->
+        <div class="favorites-dropdown" id="favorites-dropdown">
+            <h2>Your Favorites</h2>
+            <div class="favorites-content" id="favorites-content">
+                <!-- Favorites items will be dynamically added here -->
+                <p class="empty-message">Your favorites list is empty</p>
+            </div>
+        </div>
+
+        <!-- Cart Dropdown -->
+        <div class="cart-dropdown" id="cart-dropdown">
+            <h2>Your Cart</h2>
+            <div class="cart-content" id="cart-content">
+                <!-- Cart items will be dynamically added here -->
+                <p class="empty-message">Your cart is empty</p>
+            </div>
+            <div class="cart-total" id="cart-total">
+                <span>Total: $0</span>
+                <button id="checkout-btn">Checkout</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="services-container">
+        <h1>Our Services</h1>
+        <p class="services-intro">Experience excellence in automotive care with our comprehensive range of services</p>
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <i class='bx bxs-car-mechanic service-icon'></i>
+                <h3>Maintenance & Repairs</h3>
+                <p>Professional maintenance and repair services by certified technicians using genuine parts.</p>
+                <a href="#" class="service-btn">Learn More</a>
+            </div>
+
+            <div class="service-card">
+                <i class='bx bx-refresh service-icon'></i>
+                <h3>Trade-In Services</h3>
+                <p>Get the best value for your current vehicle with our fair and transparent trade-in program.</p>
+                <a href="#" class="service-btn">Get Estimate</a>
+            </div>
+
+            <div class="service-card">
+                <i class='bx bx-money service-icon'></i>
+                <h3>Financing Options</h3>
+                <p>Flexible financing solutions tailored to your budget and requirements.</p>
+                <a href="#" class="service-btn">View Options</a>
+            </div>
+
+            <div class="service-card">
+                <i class='bx bx-shield-quarter service-icon'></i>
+                <h3>Extended Warranty</h3>
+                <p>Comprehensive warranty packages for long-term peace of mind.</p>
+                <a href="#" class="service-btn">Compare Plans</a>
+            </div>
+
+            <div class="service-card">
+                <i class='bx bx-paint service-icon'></i>
+                <h3>Custom Modifications</h3>
+                <p>Professional vehicle customization and upgrade services.</p>
+                <a href="#" class="service-btn">Explore Mods</a>
+            </div>
+
+            <div class="service-card">
+                <i class='bx bx-check-shield service-icon'></i>
+                <h3>Insurance Services</h3>
+                <p>Competitive insurance rates and comprehensive coverage options.</p>
+                <a href="#" class="service-btn">Get Quote</a>
+            </div>
+        </div>
+    </main>
+
+    <script src="services.js"></script>
+    <script src="cart.js"></script>
+</body>
+</html> 

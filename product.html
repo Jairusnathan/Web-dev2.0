@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MODRINO - Auto Shop</title>
+    <!-- Box Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="product.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="nav container">
+            <!-- Menu Icon -->
+            <i class='bx bx-menu' id="menu-icon"></i>
+         <!-- Logo -->
+         <a href="#" class="logo">
+            <img src="images/logo.png" alt="NATHZZZ Logo" class="logo-img">
+          </a>
+          
+</a>
+<ul class="navbar" id="navbar">
+                <!-- Search Box -->
+                <div class="search-box">
+                    <i class='bx bx-search-alt-2'></i>
+                    <input type="search" placeholder="Search here...">
+                </div>
+
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#">New Cars ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Sedans</a></li>
+                        <li><a href="#">SUVs</a></li>
+                        <li><a href="#">Trucks</a></li>
+                        <li><a href="#">Electric Cars</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Used Cars ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Certified Pre-Owned</a></li>
+                        <li><a href="#">Budget Cars</a></li>
+                        <li><a href="#">Luxury Cars</a></li>
+                        <li><a href="#">Electric Used Cars</a></li>
+                    </ul>
+                </li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <!-- Cart and Favorites Icons -->
+            <div class="header-icons">
+                <div class="favorites-icon">
+                    <i class='bx bx-heart' id="favorites-btn"></i>
+                    <span class="favorites-count">0</span>
+                </div>
+                <div class="cart-icon">
+                    <i class='bx bx-cart' id="cart-btn"></i>
+                    <span class="cart-count">0</span>
+                </div>
+                <!-- Logout Button -->
+                <a href="#" id="logout" class="logout">Log Out</a>
+            </div>
+        </div>
+
+        <!-- Favorites Dropdown -->
+        <div class="favorites-dropdown" id="favorites-dropdown">
+            <h2>Your Favorites</h2>
+            <div class="favorites-content" id="favorites-content">
+                <p>Your favorites list is empty</p>
+            </div>
+        </div>
+
+        <!-- Cart Dropdown -->
+        <div class="cart-dropdown" id="cart-dropdown">
+            <h2>Your Cart</h2>
+            <div class="cart-content" id="cart-content">
+                <p>Your cart is empty</p>
+            </div>
+            <div class="cart-total" id="cart-total" style="display: none;">
+                <div class="d-flex justify-content-between align-items-center border-top pt-3">
+                    <span class="fw-bold">Total:</span>
+                    <span class="fw-bold total-amount">$0</span>
+                </div>
+                <a href="checkout.html" class="btn btn-danger w-100 mt-3" id="checkout-btn">
+                    <i class='bx bx-cart-alt me-2'></i>
+                    Proceed to Checkout
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container py-4">
+        <h2 class="mb-4">Available Vehicles</h2>
+        <div class="row g-4" id="productGrid">
+            <!-- Product 1 -->
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3 mb-4">
+                <div class="card product-card h-100" draggable="true" data-id="1">
+                    <img src="images/Toyota.jpg" class="card-img-top product-img" alt="Toyota Camry New">
+                    <div class="card-body d-flex flex-column">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <h5 class="card-title">Toyota Camry New</h5>
+                            <i class="bx bx-heart favorite-btn" data-id="1"></i>
+                        </div>
+                        <p class="card-text text-muted">3.5 DS PowerPulse Momentum 5dr AV</p>
+                        <div class="d-flex flex-wrap gap-2 mb-3">
+                            <span class="badge badge-miles">20 Miles</span>
+                            <span class="badge badge-fuel">Petrol</span>
+                            <span class="badge badge-transmission">Automatic</span>
+                        </div>
+                        <div class="mt-auto d-flex justify-content-between align-items-center">
+                            <h4 class="mb-0 text-primary">$40,000</h4>
+                            <button class="btn btn-primary add-to-cart-btn" data-id="1">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product 2 -->
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3 mb-4">
+                <div class="card product-card h-100" draggable="true" data-id="2">
+                    <img src="images/Supra.jpg" class="card-img-top product-img" alt="Toyota Supra – 2023">
+                    <div class="card-body d-flex flex-column">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <h5 class="card-title">Toyota Supra – 2023</h5>
+                            <i class="bx bx-heart favorite-btn" data-id="2"></i>
+                        </div>
+                        <p class="card-text text-muted">3.0-liter twin-scroll turbocharged inline-six engine and rear-wheel drive</p>
+                        <div class="d-flex flex-wrap gap-2 mb-3">
+                            <span class="badge badge-miles">10 km/L</span>
+                            <span class="badge badge-fuel">Petrol</span>
+                            <span class="badge badge-transmission">Manual</span>
+                        </div>
+                        <div class="mt-auto d-flex justify-content-between align-items-center">
+                            <h4 class="mb-0 text-primary">$57,000</h4>
+                            <button class="btn btn-primary add-to-cart-btn" data-id="2">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product 3 -->
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3 mb-4">
+                <div class="card product-card h-100" draggable="true" data-id="3">
+                    <img src="images/Fortuner.jpg" class="card-img-top product-img" alt="Toyota Fortuner GR 2023">
+                    <div class="card-body d-flex flex-column">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <h5 class="card-title">Toyota Fortuner GR 2023</h5>
+                            <i class="bx bx-heart favorite-btn" data-id="3"></i>
+                        </div>
+                        <p class="card-text text-muted">2.8 Powerful Diesel Engine 4x4</p>
+                        <div class="d-flex flex-wrap gap-2 mb-3">
+                            <span class="badge badge-miles">17 km/L</span>
+                            <span class="badge badge-fuel">Diesel</span>
+                            <span class="badge badge-transmission">Automatic</span>
+                        </div>
+                        <div class="mt-auto d-flex justify-content-between align-items-center">
+                            <h4 class="mb-0 text-primary">$40,000</h4>
+                            <button class="btn btn-primary add-to-cart-btn" data-id="3">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product 4 -->
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3 mb-4">
+                <div class="card product-card h-100" draggable="true" data-id="4">
+                    <img src="images/Hilux.jpg" class="card-img-top product-img" alt="Toyota Hilux GRS">
+                    <div class="card-body d-flex flex-column">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <h5 class="card-title">Toyota Hilux GRS</h5>
+                            <i class="bx bx-heart favorite-btn" data-id="4"></i>
+                        </div>
+                        <p class="card-text text-muted">2.8 Diesel Engine Best Pickup Truck</p>
+                        <div class="d-flex flex-wrap gap-2 mb-3">
+                            <span class="badge badge-miles">15 km/L</span>
+                            <span class="badge badge-fuel">Diesel</span>
+                            <span class="badge badge-transmission">Automatic</span>
+                        </div>
+                        <div class="mt-auto d-flex justify-content-between align-items-center">
+                            <h4 class="mb-0 text-primary">$38,000</h4>
+                            <button class="btn btn-primary add-to-cart-btn" data-id="4">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product 5 -->
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3 mb-4">
+                <div class="card product-card h-100" draggable="true" data-id="5">
+                    <img src="images/Alphard.jpg" class="card-img-top product-img" alt="Toyota Alphard HEV">
+                    <div class="card-body d-flex flex-column">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <h5 class="card-title">Toyota Alphard HEV</h5>
+                            <i class="bx bx-heart favorite-btn" data-id="5"></i>
+                        </div>
+                        <p class="card-text text-muted">2.5-liter inline four-cylinder DOHC engine (A25A-FXS)</p>
+                        <div class="d-flex flex-wrap gap-2 mb-3">
+                            <span class="badge badge-miles">18 km/L</span>
+                            <span class="badge badge-fuel">Petrol</span>
+                            <span class="badge badge-transmission">Automatic</span>
+                        </div>
+                        <div class="mt-auto d-flex justify-content-between align-items-center">
+                            <h4 class="mb-0 text-primary">$95,000</h4>
+                            <button class="btn btn-primary add-to-cart-btn" data-id="5">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product 6 -->
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3 mb-4">
+                <div class="card product-card h-100" draggable="true" data-id="6">
+                    <img src="images/Vios.jpg" class="card-img-top product-img" alt="Vios New">
+                    <div class="card-body d-flex flex-column">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <h5 class="card-title">Vios New</h5>
+                            <i class="bx bx-heart favorite-btn" data-id="6"></i>
+                        </div>
+                        <p class="card-text text-muted">3.5 DS PowerPulse Momentum 5dr AV</p>
+                        <div class="d-flex flex-wrap gap-2 mb-3">
+                            <span class="badge badge-miles">22 km/L</span>
+                            <span class="badge badge-fuel">Petrol</span>
+                            <span class="badge badge-transmission">Automatic CVT</span>
+                        </div>
+                        <div class="mt-auto d-flex justify-content-between align-items-center">
+                            <h4 class="mb-0 text-primary">$10,000</h4>
+                            <button class="btn btn-primary add-to-cart-btn" data-id="6">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product 7 -->
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3 mb-4">
+                <div class="card product-card h-100" draggable="true" data-id="7">
+                    <img src="images/Altis.jpg" class="card-img-top product-img" alt="Corolla Altis – 2023">
+                    <div class="card-body d-flex flex-column">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <h5 class="card-title">Corolla Altis – 2023</h5>
+                            <i class="bx bx-heart favorite-btn" data-id="7"></i>
+                        </div>
+                        <p class="card-text text-muted">Type, 2ZR-FXE: In-Line 4, 16-Valve DOHC, Chain Drive with Dual VVT-I, Hybrid</p>
+                        <div class="d-flex flex-wrap gap-2 mb-3">
+                            <span class="badge badge-miles">18 km/L</span>
+                            <span class="badge badge-fuel">Petrol</span>
+                            <span class="badge badge-transmission">CVT</span>
+                        </div>
+                        <div class="mt-auto d-flex justify-content-between align-items-center">
+                            <h4 class="mb-0 text-primary">$45,000</h4>
+                            <button class="btn btn-primary add-to-cart-btn" data-id="7">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product 8 -->
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3 mb-4">
+                <div class="card product-card h-100" draggable="true" data-id="8">
+                    <img src="images/GR86.jpg" class="card-img-top product-img" alt="Toyota GR86">
+                    <div class="card-body d-flex flex-column">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <h5 class="card-title">Toyota GR86</h5>
+                            <i class="bx bx-heart favorite-btn" data-id="8"></i>
+                        </div>
+                        <p class="card-text text-muted">Naturally aspirated, 2.0-liter, 4-cylinder, horizontally opposed engine</p>
+                        <div class="d-flex flex-wrap gap-2 mb-3">
+                            <span class="badge badge-miles">10 km/L</span>
+                            <span class="badge badge-fuel">Petrol</span>
+                            <span class="badge badge-transmission">Manual</span>
+                        </div>
+                        <div class="mt-auto d-flex justify-content-between align-items-center">
+                            <h4 class="mb-0 text-primary">$60,000</h4>
+                            <button class="btn btn-primary add-to-cart-btn" data-id="8">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>

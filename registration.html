@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NATHZZZ - Register</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="auth-container">
+        <img src="images/Logo.png" alt="NATHZZZ LOGO" class="logo-img">    
+        
+        <!-- Registration Form Container -->
+        <div class="form-container active" id="register-container">
+            <form class="auth-form" id="registerForm">
+                <div class="auth-title">Create your account</div>
+                <div class="form-group">
+                    <input type="text" class="auth-input" id="registerName" placeholder="Full name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" class="auth-input" id="registerEmail" placeholder="Email address" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" class="auth-input" id="registerPassword" placeholder="Password" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" class="auth-input" id="confirmPassword" placeholder="Confirm password" required>
+                </div>
+                <button type="submit" class="auth-btn btn-continue">
+                    Create Account
+                </button>
+                
+                <div class="divider">or</div>
+                
+                <button class="auth-btn btn-facebook">
+                    <span class="auth-icon">f</span> Continue with Facebook
+                </button>
+                <button class="auth-btn btn-google">
+                    <span class="auth-icon">G</span> Continue with Google
+                </button>
+                <button class="auth-btn btn-apple">
+                    <span class="auth-icon"></span> Continue with Apple
+                </button>
+                
+                <div class="register-text">
+                    Already have an account? 
+                    <a href="login.html" class="register-link">Log in</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="registration.js"></script>
+</body>
+</html> 
